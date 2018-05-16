@@ -31,21 +31,21 @@ The repository for all labs is found at https://github.com/whatyouhide/workshop-
 
   1. git clone from your console
 
-		```
-    $ git clone https://github.com/whatyouhide/workshop-parallel-computation-with-elixir
-		```
+	   ```bash
+     $ git clone https://github.com/whatyouhide/workshop-parallel-computation-with-elixir
+	   ```
 
   2. Enter the workshop directory
 
-		```
-    $ cd workshop-parallel-computation-with-elixir
-		```
+		 ```bash
+     $ cd workshop-parallel-computation-with-elixir
+		 ```
 
-  2. Enter the directory for the current lab named labN
+  2. Enter the directory for the current lab named `labN`. For example, for `lab1`:
 
-		```
-    $ cd labN
-		```
+		 ```bash
+     $ cd lab1
+		 ```
 
 
 ### Running tests
