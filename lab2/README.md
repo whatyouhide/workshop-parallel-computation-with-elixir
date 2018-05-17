@@ -20,7 +20,10 @@ API docs: https://hexdocs.pm/elixir/
 
   2. `Enum` https://hexdocs.pm/elixir/Enum.html
 
+  3. `Task` https://hexdocs.pm/elixir/Task.html
+
 
 ### Solution ( no peeking :) )
 
-See `solutions_streams.ex` for streams exercises in the `lab2` directory.
+See `solutions_streams.ex` for streams exercises and `solutions_tasks.ex` for tasks exercises in
+the `lab2` directory.

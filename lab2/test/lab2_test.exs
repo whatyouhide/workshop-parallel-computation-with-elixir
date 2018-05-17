@@ -48,3 +48,43 @@ defmodule Lab2.StreamsTest do
     assert Lab2.Streams.dedup([nil]) |> Enum.to_list() == [nil]
   end
 end
+
+defmodule Lab2.TasksTest do
+  use ExUnit.Case
+
+  @tag :skip
+  test "pmap/2" do
+    {time_in_microsec, result} =
+      :timer.tc(fn ->
+        Lab2.Tasks.pmap([1000, 1000, 1000], fn ms ->
+          Process.sleep(ms)
+          Integer.to_string(ms)
+        end)
+      end)
+
+    assert div(time_in_microsec, 1000) in 1000..2000
+    assert result == ["1000", "1000", "1000"]
+  end
+
+  describe "async/await" do
+    @tag :skip
+    test "when everything goes fine" do
+      async = Lab2.Tasks.async(fn -> 1 + 10 end)
+      assert Lab2.Tasks.await(async) == {:ok, 11}
+    end
+
+    @tag :skip
+    @tag :capture_log
+    test "when the process crashes" do
+      async = Lab2.Tasks.async(fn -> raise "nope!" end)
+      assert Lab2.Tasks.await(async) == :error
+    end
+
+    @tag :skip
+    test "no messages are leaked" do
+      async = Lab2.Tasks.async(fn -> 1 + 10 end)
+      assert Lab2.Tasks.await(async) == {:ok, 11}
+      refute_receive _
+    end
+  end
+end
