@@ -18,7 +18,7 @@ or higher. Check the version by running `iex`:
 
 ```
 ~ λ iex
-Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
+Erlang/OTP 20 [erts-9.3] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
 Interactive Elixir (1.6.5) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)>
@@ -49,6 +49,15 @@ The repository for all labs is found at https://github.com/whatyouhide/workshop-
 
 
 ### Running tests
+
+As you start out with a new lab all tests will be skipped with `@tag :skip`, remove this tag when
+you start working on a test.
+
+
+Tests are tagged with `@tag :skip`. When you run `mix test`, all tests are skipped so you will see
+all tests "passing". You should remove or comment out the `@tag :skip` line above the first test
+and then run tests to see that test fail. Then, implement the first function until the test
+passes. Repeat for all other functions.
 
  * Run all tests for a project: `$ mix test`
 
