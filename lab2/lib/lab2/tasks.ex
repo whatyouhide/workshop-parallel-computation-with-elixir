@@ -17,6 +17,20 @@ defmodule Lab2.Tasks do
   end
 
   @doc """
+  Takes a stream of enumerables and returns a stream of the sum of each enumerable.
+
+  ## Examples
+
+      iex> Enum.to_list(sum_all([1..2, 3..4, 5..6]))
+      [3, 7, 11]
+
+  """
+  @spec sum_all(Enumerable.t()) :: Enumerable.t()
+  def sum_all(stream_of_enums) do
+    raise "not implemented yet"
+  end
+
+  @doc """
   Spawns a process that executes the given computation (given as a function) and that can be
   awaited on.
 
@@ -54,20 +68,6 @@ defmodule Lab2.Tasks do
   """
   @spec await(term()) :: term()
   def await(task) do
-    raise "not implemented yet"
-  end
-
-  @doc """
-  Takes a stream of enumerables and returns a stream of the sum of each enumerable.
-
-  ## Examples
-
-      iex> Enum.to_list(sum_all([1..2, 3..4, 5..6]))
-      [3, 7, 11]
-
-  """
-  @spec sum_all(Enumerable.t()) :: Enumerable.t()
-  def sum_all(stream_of_enums) do
     raise "not implemented yet"
   end
 end
