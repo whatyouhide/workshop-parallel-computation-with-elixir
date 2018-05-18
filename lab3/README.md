@@ -21,4 +21,4 @@ API docs: https://hexdocs.pm/elixir/
 
 ### Solution ( no peeking :) )
 
-See `solution.ex` in the `lab3` directory.
+See the `solution_*.ex` files in the `lab3` directory.
