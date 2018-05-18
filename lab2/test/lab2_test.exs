@@ -1,7 +1,7 @@
 defmodule Lab2.StreamsTest do
   use ExUnit.Case
 
-  @pride_and_prejudice Path.absname("pride-and-prejudice.txt", __DIR__)
+  @pride_and_prejudice Path.join(__DIR__, "../../pride-and-prejudice.txt")
 
   @tag :skip
   test "counting words" do
