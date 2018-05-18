@@ -87,4 +87,15 @@ defmodule Lab2.TasksTest do
       refute_receive _
     end
   end
+
+  @tag :skip
+  test "sum_all/1" do
+    refute is_list(Lab2.Tasks.sum_all([1..2]))
+
+    assert Enum.to_list(Lab2.Tasks.sum_all([1..2])) == [3]
+    assert Enum.to_list(Lab2.Tasks.sum_all([1..2, 3..4, 5..6])) == [3, 7, 11]
+
+    assert Enum.to_list(Lab2.Tasks.sum_all([[1, 2]])) == [3]
+    assert Enum.to_list(Lab2.Tasks.sum_all([[1, 2], [3, 4], [5, 6]])) == [3, 7, 11]
+  end
 end

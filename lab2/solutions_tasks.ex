@@ -74,4 +74,20 @@ defmodule Lab2.Tasks do
         :error
     end
   end
+
+  @doc """
+  Takes a stream of enumerables and returns a stream of the sum of each enumerable.
+
+  ## Examples
+
+      iex> Enum.to_list(sum_all([1..2, 3..4, 5..6]))
+      [3, 7, 11]
+
+  """
+  @spec sum_all(Enumerable.t()) :: Enumerable.t()
+  def sum_all(stream_of_enums) do
+    stream_of_enums
+    |> Task.async_stream(&Enum.sum/1)
+    |> Stream.map(fn {:ok, i} -> i end)
+  end
 end
