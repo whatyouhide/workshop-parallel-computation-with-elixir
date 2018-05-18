@@ -28,13 +28,13 @@ defmodule Lab1 do
   end
 
   def sum_all(list_of_lists) do
-    current_pid = self()
+    caller_pid = self()
 
     refs =
       Enum.map(list_of_lists, fn list ->
         ref = make_ref()
         spawn(fn ->
-          send(current_pid, {ref, Enum.sum(list)})
+          send(caller_pid, {ref, Enum.sum(list)})
         end)
         ref
       end)
