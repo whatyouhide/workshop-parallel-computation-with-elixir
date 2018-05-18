@@ -70,4 +70,10 @@ passes. Repeat for all other functions.
 
 The individual labs can be found at the following URLs:
 
-*Lab 1* - Process basics: https://github.com/ericmj/workshop/tree/master/lab1
+*Lab 1* - Process basics: https://github.com/whatyouhide/workshop-parallel-computation-with-elixir/tree/master/lab1
+
+*Lab 2* - Streams and tasks: https://github.com/whatyouhide/workshop-parallel-computation-with-elixir/tree/master/lab2
+
+*Lab 3* - GenStage: https://github.com/whatyouhide/workshop-parallel-computation-with-elixir/tree/master/lab3
+
+*Lab 4* - Flow: https://github.com/whatyouhide/workshop-parallel-computation-with-elixir/tree/master/lab4
